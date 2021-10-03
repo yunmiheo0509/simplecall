@@ -1,5 +1,5 @@
 package com.remotemonster.example.simplecall
-
+/*
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
@@ -121,7 +121,7 @@ class MainActivity : AppCompatActivity() {
             .serviceId( "75faedb2-cbb0-4be2-a85b-be24e7212d9c")
 //            .serviceId( "SERVICEID1")
 //            .key("1234567890")
-            .key("59b7806a00be4e9e23095f6cc3060facf0d9358fb66fc5ff84ccce0bdff49381")
+            .key("c95cca523618c8b5b51d7c24a0d72c993fd41254f6a09b790f16c949085f6dd6")
             .videoCodec("VP8")
             .videoWidth(640)
             .videoHeight( 480 )
@@ -143,10 +143,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         // 서버 접속 및 채널 생성이 완료된 이후 호출되는 콜백입니다.
-        remonCall?.onConnect { id: String ->
-            Snackbar.make( binding.rootLayout, "채널($id)에 연결되었습니다.", Snackbar.LENGTH_SHORT).show()
+        remonCall?.onConnect(fun(id: String) {
+            Snackbar.make(binding.rootLayout, "채널($id)에 연결되었습니다.", Snackbar.LENGTH_SHORT).show()
             updateView(false)
-        }
+        })
 
 
         // 다른 사용자와 Peer 연결이 완료된 이후 호출되는 콜백입니다.
@@ -315,3 +315,4 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
+*/
